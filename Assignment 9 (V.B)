@@ -1,0 +1,24 @@
+Module Module1
+
+    Sub Main()
+
+        Dim StrA, StrB, FA, FB, FinalStr As String
+
+        Console.Write("Enter String A : ")
+        StrA = Console.ReadLine()
+
+        Console.Write("Enter String B : ")
+        StrB = Console.ReadLine()
+
+        FA = Left(StrA, 2)
+        FB = Left(StrB, 2)
+
+        FinalStr = FB & Right(StrA, Len(StrA) - 2) & " " & FA & Right(StrB, Len(StrB) - 2)
+        Console.WriteLine(FinalStr)
+
+        Console.ReadKey()
+
+
+    End Sub
+
+End Module
