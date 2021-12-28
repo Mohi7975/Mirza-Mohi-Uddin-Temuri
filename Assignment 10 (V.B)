@@ -1,0 +1,23 @@
+Module Module1
+
+    Sub Main()
+
+        Dim Str As String
+
+        Console.Write("Enter a string: ")
+        Str = Console.ReadLine()
+
+        If Len(Str) >= 3 Then
+            If Right(Str, 3) = "ing" Then
+                Str = Str & "ly"
+            Else
+                Str = Str & "ing"
+            End If
+        End If
+
+        Console.WriteLine(Str)
+        Console.ReadLine()
+
+    End Sub
+
+End Module
