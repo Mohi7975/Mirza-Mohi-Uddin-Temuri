@@ -1,0 +1,46 @@
+Module Module1
+
+    Sub Main()
+
+        Dim String1, String2 As String
+        Dim character1, character2 As Char
+        Dim alphabetcount, charactercount, digitcount, Count As Integer
+        alphabetcount = 0
+        charactercount = 0
+        digitcount = 0
+        Count = 0
+
+
+        Console.WriteLine("Enter a String")
+        String1 = Console.ReadLine()
+        Console.WriteLine("Enter the character that you want to count")
+        character1 = Console.ReadLine()
+
+        String2 = LCase(String1)
+
+
+        For i = 1 To Len(String1)
+
+            character2 = Mid(String1, i, 1)
+            If character2 = character1 Then
+                Count = Count + 1
+            End If
+
+            character2 = Mid(String2, i, 1)
+            If character2 >= "a" And character2 <= "z" Then
+                alphabetcount = alphabetcount + 1
+            ElseIf character2 >= "0" And character2 <= "9" Then
+                digitcount = digitcount + 1
+            Else
+                charactercount = charactercount + 1
+                Console.WriteLine(character2)
+            End If
+
+        Next
+
+        Console.WriteLine(String1 & " has " & Count & " selected character, " & alphabetcount & " alphabets, " & digitcount & " digits, and " & charactercount & " special characters")
+        Console.ReadKey()
+
+    End Sub
+
+End Module
