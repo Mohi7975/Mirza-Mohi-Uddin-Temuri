@@ -1,0 +1,22 @@
+Module Module1
+
+    Sub Main()
+
+        Dim S, S1 As String
+
+        Console.Write("Enter a string: ")
+        S = Console.ReadLine()
+        S1 = Right(S, Len(S) - 1)
+
+        For i = 1 To Len(S)
+            If Mid(S, 1, 1) = Mid(S1, i, 1) Then
+                S1 = Left(S1, i - 1) & "*" & Right(S1, Len(S1) - i)
+            End If
+        Next
+
+        Console.WriteLine(Mid(S, 1, 1) & S1)
+        Console.ReadLine()
+
+    End Sub
+
+End Module
