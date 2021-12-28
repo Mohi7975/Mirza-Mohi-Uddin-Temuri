@@ -1,0 +1,40 @@
+Module Module1
+
+    Sub Main()
+
+        Dim Str As String
+        Dim m, n As Char
+        Dim Pos As Integer = 1
+        Dim x As Integer = 0
+        Dim max As Integer = 0
+        Dim charmax As Char = ""
+
+        Console.Write("Enter a String : ")
+        Str = Console.ReadLine()
+
+        For i = 1 To Len(Str)
+            m = Mid(Str, i, 1)
+            x = 0
+
+            For c = 1 To Len(Str)
+                n = Mid(Str, c, 1)
+
+                If m = n Then
+                    x = x + 1
+                End If
+
+                If x > max Then
+                    max = x
+                    charmax = n
+                End If
+            Next
+
+        Next
+
+        Console.WriteLine(max)
+        Console.WriteLine(charmax)
+        Console.ReadLine()
+
+    End Sub
+
+End Module
