@@ -1,0 +1,26 @@
+Module Module1
+
+    Sub Main()
+
+        Dim x, F2, L2, FINAL As String
+        F2 = ""
+        L2 = ""
+        x = ""
+        FINAL = ""
+
+        Console.Write("Enter a string: ")
+        x = Console.ReadLine
+        If Len(x) <= 2 Then
+            Console.WriteLine(x)
+        Else : F2 = Left(x, 2)
+            L2 = Right(x, 2)
+            FINAL = F2 & L2
+            Console.WriteLine(FINAL)
+        End If
+
+        Console.ReadKey()
+
+
+    End Sub
+
+End Module
